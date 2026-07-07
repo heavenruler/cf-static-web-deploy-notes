@@ -54,4 +54,4 @@ grep -R -i "token\|secret\|password\|api_key\|apikey" .
 
 ## 後續需替換資訊
 
-正式網域、GA4 Measurement ID、Google Ads Conversion ID／Label、Meta Pixel ID、實際品牌名稱、實際服務名稱、主要轉換目標與聯絡信箱。
+Google Ads Conversion ID／Label 與 Meta Pixel ID。正式網域、GA4 Measurement ID、品牌名稱、服務名稱、主要轉換目標及聯絡信箱已設定。

@@ -1,18 +1,18 @@
 # GA4 設定
 
-GA4 用來衡量流量來源、內容互動與名單轉換。正式上線前將 `G-XXXXXXXXXX` 換成 Measurement ID。
+GA4 用來衡量流量來源、內容互動與名單轉換。本網站使用 Measurement ID `G-J54H2JZ2RF`。
 
 ## 安裝 gtag.js
 
 在所有頁面 `<head>` 加入非同步 Google tag，初始化 `dataLayer`、`gtag` 及 `config`。`config` 預設會送出 `page_view`；若自行控制頁面瀏覽事件，設定 `send_page_view: false`，避免重複。
 
 ```html
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-J54H2JZ2RF"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'G-XXXXXXXXXX');
+  gtag('config', 'G-J54H2JZ2RF');
 </script>
 ```
 
