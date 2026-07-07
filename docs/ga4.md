@@ -7,14 +7,16 @@ GA4 用來衡量流量來源、內容互動與名單轉換。本網站使用 Mea
 在所有頁面 `<head>` 加入非同步 Google tag，初始化 `dataLayer`、`gtag` 及 `config`。`config` 預設會送出 `page_view`；若自行控制頁面瀏覽事件，設定 `send_page_view: false`，避免重複。
 
 ```html
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-J54H2JZ2RF"></script>
-<script>
+<script data-cfasync="false" async src="https://www.googletagmanager.com/gtag/js?id=G-J54H2JZ2RF"></script>
+<script data-cfasync="false">
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-J54H2JZ2RF');
 </script>
 ```
+
+`data-cfasync="false"` 可避免 Cloudflare Rocket Loader 改寫 Google tag 的執行順序；此屬性必須放在 `src` 前方。
 
 ## 建議事件
 
