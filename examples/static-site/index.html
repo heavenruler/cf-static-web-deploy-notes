@@ -15,13 +15,23 @@
   <meta name="twitter:title" content="Cloudflare 靜態網站成長部署｜雲頁成長工坊">
   <meta name="twitter:description" content="快速部署可搜尋、可衡量的靜態 Landing Page。">
   <link rel="stylesheet" href="/assets/style.css">
-  <script data-cfasync="false" async src="https://www.googletagmanager.com/gtag/js?id=G-J54H2JZ2RF"></script>
   <script data-cfasync="false">
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
+    var savedConsent = null;
+    try { savedConsent = localStorage.getItem('analytics-consent'); } catch (error) {}
+    var consentGranted = savedConsent === 'granted';
+    gtag('consent', 'default', {
+      analytics_storage: consentGranted ? 'granted' : 'denied',
+      ad_storage: consentGranted ? 'granted' : 'denied',
+      ad_user_data: consentGranted ? 'granted' : 'denied',
+      ad_personalization: consentGranted ? 'granted' : 'denied',
+      wait_for_update: 500
+    });
     gtag('js', new Date());
     gtag('config', 'G-J54H2JZ2RF');
   </script>
+  <script data-cfasync="false" async src="https://www.googletagmanager.com/gtag/js?id=G-J54H2JZ2RF"></script>
   <!-- Google Ads 與 Meta Pixel 將於取得正式 ID 後啟用。 -->
   <script type="application/ld+json">
   {
@@ -59,6 +69,11 @@
     <section id="contact"><div class="container callout"><h2>準備建立可部署的靜態網站？</h2><p>來信說明目標、受眾與主要轉換動作，我們將以寄信詢價作為主要轉換。</p><a class="button" href="mailto:heavenruler@gmail.com" onclick="trackEvent('generate_lead', {method: 'email'})">heavenruler@gmail.com</a></div></section>
   </main>
   <footer><div class="container"><span>© 雲頁成長工坊</span> · <a href="/privacy.html">隱私權政策</a></div></footer>
+  <aside class="consent-banner" data-consent-banner hidden aria-label="Cookie 同意設定">
+    <div><strong>Cookie 與成效評估</strong><p>我們使用 GA4 分析網站使用情形。您可接受分析與廣告用途，或僅使用網站必要功能。詳見<a href="/privacy.html">隱私權政策</a>。</p></div>
+    <div class="consent-actions"><button class="button secondary" type="button" data-consent="denied">僅必要</button><button class="button" type="button" data-consent="granted">接受全部</button></div>
+  </aside>
   <script data-cfasync="false" src="/scripts/main.js"></script>
+  <script data-cfasync="false" src="/scripts/consent.js"></script>
 </body>
 </html>

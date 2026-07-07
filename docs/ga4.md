@@ -18,6 +18,10 @@ GA4 用來衡量流量來源、內容互動與名單轉換。本網站使用 Mea
 
 `data-cfasync="false"` 可避免 Cloudflare Rocket Loader 改寫 Google tag 的執行順序；此屬性必須放在 `src` 前方。
 
+## Consent Mode v2
+
+網站在 Google tag 設定前先將 `analytics_storage`、`ad_storage`、`ad_user_data` 與 `ad_personalization` 設為 `denied`。使用者選擇後，再以 `gtag('consent', 'update', ...)` 更新狀態。選擇只儲存在本站的 `localStorage`，Cookie 橫幅不可預先勾選或以沉默視為同意。
+
 ## 建議事件
 
 ```javascript

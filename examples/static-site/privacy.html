@@ -6,20 +6,35 @@
   <meta name="description" content="雲頁成長工坊網站的資料蒐集、追蹤技術與 Cookie 說明。">
   <link rel="canonical" href="https://demo.wnlin.org/privacy.html">
   <link rel="stylesheet" href="/assets/style.css">
-  <script data-cfasync="false" async src="https://www.googletagmanager.com/gtag/js?id=G-J54H2JZ2RF"></script>
   <script data-cfasync="false">
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
+    var savedConsent = null;
+    try { savedConsent = localStorage.getItem('analytics-consent'); } catch (error) {}
+    var consentGranted = savedConsent === 'granted';
+    gtag('consent', 'default', {
+      analytics_storage: consentGranted ? 'granted' : 'denied',
+      ad_storage: consentGranted ? 'granted' : 'denied',
+      ad_user_data: consentGranted ? 'granted' : 'denied',
+      ad_personalization: consentGranted ? 'granted' : 'denied',
+      wait_for_update: 500
+    });
     gtag('js', new Date());
     gtag('config', 'G-J54H2JZ2RF');
   </script>
+  <script data-cfasync="false" async src="https://www.googletagmanager.com/gtag/js?id=G-J54H2JZ2RF"></script>
 </head>
 <body><header class="site-header"><div class="container nav"><a class="brand" href="/">雲頁成長工坊</a></div></header>
 <main><article class="container policy"><h1>隱私權政策</h1>
   <h2>資料蒐集目的</h2><p>本網站為提供服務諮詢、回覆聯絡需求、改善網站內容及衡量行銷成效，可能蒐集您主動提供的聯絡資料與網站使用資訊。</p>
   <h2>分析與廣告追蹤</h2><p>本網站可能使用 GA4、Google Ads 與 Meta Pixel 記錄頁面瀏覽、互動及轉換。資料用於彙整分析與廣告成效衡量；實際啟用範圍應依同意選擇與適用法規調整。</p>
-  <h2>Cookie</h2><p>分析及廣告工具可能使用 Cookie 或類似技術識別瀏覽器。您可透過瀏覽器或網站提供的同意設定管理 Cookie；停用後部分衡量功能可能無法運作。</p>
+  <h2>Cookie 與同意選擇</h2><p>分析及廣告工具可能使用 Cookie 或類似技術識別瀏覽器。首次進入網站時，分析與廣告儲存預設為停用；您可選擇「接受全部」或「僅必要」。停用後部分成效衡量功能可能無法運作。若要變更選擇，可清除本站的瀏覽器網站資料後重新開啟頁面。</p>
   <h2>聯絡方式</h2><p>若對資料處理有疑問，請寄信至 <a href="mailto:heavenruler@gmail.com">heavenruler@gmail.com</a>。</p>
   <p><a href="/">返回首頁</a></p>
-</article></main><footer><div class="container">© 雲頁成長工坊</div></footer></body>
+</article></main><footer><div class="container">© 雲頁成長工坊</div></footer>
+<aside class="consent-banner" data-consent-banner hidden aria-label="Cookie 同意設定">
+  <div><strong>Cookie 與成效評估</strong><p>我們使用 GA4 分析網站使用情形。您可接受分析與廣告用途，或僅使用網站必要功能。</p></div>
+  <div class="consent-actions"><button class="button secondary" type="button" data-consent="denied">僅必要</button><button class="button" type="button" data-consent="granted">接受全部</button></div>
+</aside>
+<script data-cfasync="false" src="/scripts/consent.js"></script></body>
 </html>
