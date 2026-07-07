@@ -6,22 +6,11 @@
   <meta name="description" content="雲頁成長工坊網站的資料蒐集、追蹤技術與 Cookie 說明。">
   <link rel="canonical" href="https://demo.wnlin.org/privacy.html">
   <link rel="stylesheet" href="/assets/style.css">
-  <script data-cfasync="false">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J54H2JZ2RF"></script>
+  <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    var savedConsent = null;
-    try { savedConsent = localStorage.getItem('analytics-consent'); } catch (error) {}
-    var consentGranted = savedConsent === 'granted';
-    gtag('consent', 'default', {
-      analytics_storage: consentGranted ? 'granted' : 'denied',
-      ad_storage: consentGranted ? 'granted' : 'denied',
-      ad_user_data: consentGranted ? 'granted' : 'denied',
-      ad_personalization: consentGranted ? 'granted' : 'denied',
-      wait_for_update: 500
-    });
-  </script>
-  <script data-cfasync="false" async src="https://www.googletagmanager.com/gtag/js?id=G-J54H2JZ2RF"></script>
-  <script data-cfasync="false">
     gtag('js', new Date());
     gtag('config', 'G-J54H2JZ2RF');
   </script>
