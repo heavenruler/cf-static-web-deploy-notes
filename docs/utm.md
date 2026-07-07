@@ -13,19 +13,19 @@
 Google Ads：
 
 ```text
-https://example.com/?utm_source=google&utm_medium=cpc&utm_campaign=cf_static_web_launch&utm_content=hero_cta&utm_term=cloudflare_pages_static_site
+https://demo.wnlin.org/?utm_source=google&utm_medium=cpc&utm_campaign=cf_static_web_launch&utm_content=hero_cta&utm_term=cloudflare_pages_static_site
 ```
 
 Meta Ads：
 
 ```text
-https://example.com/?utm_source=meta&utm_medium=paid_social&utm_campaign=cf_static_web_launch&utm_content=video_a
+https://demo.wnlin.org/?utm_source=meta&utm_medium=paid_social&utm_campaign=cf_static_web_launch&utm_content=video_a
 ```
 
 Email：
 
 ```text
-https://example.com/?utm_source=newsletter&utm_medium=email&utm_campaign=cf_static_web_launch&utm_content=primary_cta
+https://demo.wnlin.org/?utm_source=newsletter&utm_medium=email&utm_campaign=cf_static_web_launch&utm_content=primary_cta
 ```
 
 ## 規則

@@ -31,7 +31,7 @@ Build output directory: examples/static-site
 
 ## 自訂網域與 HTTPS
 
-在 Pages 專案的 Custom domains 加入 `example.com`，依畫面建立或調整 DNS。先決定 root 與 `www` 何者為 canonical，另一者做 301 redirect。等待憑證啟用後確認 HTTPS，避免頁面載入 HTTP 資源；若網域已有特殊 CAA、代理或 SSL/TLS 規則，需一併檢查。
+在 Pages 專案的 Custom domains 加入 `demo.wnlin.org`，依畫面建立或調整 DNS。等待憑證啟用後確認 HTTPS，避免頁面載入 HTTP 資源；若網域已有特殊 CAA、代理或 SSL/TLS 規則，需一併檢查。
 
 ## `_headers`
 
@@ -40,10 +40,10 @@ Build output directory: examples/static-site
 ## 驗證
 
 ```bash
-curl -I https://example.com/
-curl -I https://example.com/assets/style.css
-curl -s https://example.com/robots.txt
-curl -s https://example.com/sitemap.xml
+curl -I https://demo.wnlin.org/
+curl -I https://demo.wnlin.org/assets/style.css
+curl -s https://demo.wnlin.org/robots.txt
+curl -s https://demo.wnlin.org/sitemap.xml
 ```
 
 確認狀態碼、HTTPS、安全標頭、Cache-Control、canonical 與網址內容一致。
