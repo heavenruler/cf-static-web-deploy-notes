@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cloudflare Pages 靜態網站部署與成效追蹤｜Your Brand</title>
+  <meta name="description" content="以 Cloudflare Pages 建立兼顧 SEO、GEO、AEO、GA4 與廣告追蹤的靜態網站。">
+  <link rel="canonical" href="https://example.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="zh_TW">
+  <meta property="og:title" content="Cloudflare Static Web Growth Stack｜Your Brand">
+  <meta property="og:description" content="快速部署可搜尋、可衡量的靜態 Landing Page。">
+  <meta property="og:url" content="https://example.com/">
+  <meta property="og:image" content="https://example.com/assets/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cloudflare Static Web Growth Stack｜Your Brand">
+  <meta name="twitter:description" content="快速部署可搜尋、可衡量的靜態 Landing Page。">
+  <meta name="twitter:image" content="https://example.com/assets/og-image.jpg">
+  <link rel="stylesheet" href="/assets/style.css">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+    (window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '000000000000000');
+    fbq('track', 'PageView');
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Cloudflare Static Web Growth Stack",
+    "provider": {"@type": "Organization", "name": "Your Brand", "url": "https://example.com/"},
+    "url": "https://example.com/",
+    "description": "Cloudflare Pages 靜態網站部署、內容最佳化與成效追蹤服務",
+    "areaServed": "TW"
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header"><div class="container nav"><a class="brand" href="/">Your Brand</a><a href="#contact">聯絡我們</a></div></header>
+  <main>
+    <section class="hero"><div class="container">
+      <p class="eyebrow">Cloudflare Static Web Growth Stack</p>
+      <h1>部署快速、可搜尋、可衡量的靜態網站</h1>
+      <p class="lead">整合 Cloudflare Pages、SEO／GEO／AEO 與行銷事件追蹤，建立可直接上線的 Landing Page 基礎。</p>
+      <a class="button" href="#contact" onclick="trackEvent('click_cta', {location: 'hero'})">開始規劃</a>
+    </div></section>
+    <section><div class="container"><h2>服務說明</h2><div class="grid">
+      <article class="card"><h3>部署基礎</h3><p>以純 HTML、CSS、JavaScript 製作，透過 Cloudflare Pages 發布並設定 HTTPS、安全標頭與快取。</p></article>
+      <article class="card"><h3>適用對象</h3><p>適合需要活動頁、服務頁、驗證市場需求，且不需複雜後端的團隊與個人品牌。</p></article>
+    </div></div></section>
+    <section class="muted"><div class="container"><h2>SEO、GEO 與 AEO</h2><p>我們用明確的頁面主題、標題層級、canonical、結構化資料與 FAQ，協助搜尋引擎及回答系統理解內容。所有資訊仍須真實、可驗證並定期更新。</p></div></section>
+    <section><div class="container"><h2>GA4 與廣告追蹤</h2><p>範例涵蓋 CTA、名單與下載事件，並示範 GA4 和 Meta Pixel 的安全事件包裝；正式投放前須替換 ID、取得適當同意並逐項測試。</p>
+      <a href="#" onclick="trackEvent('file_download', {file_name: 'service-guide.pdf'}); return false;">下載服務簡介（範例）</a>
+    </div></section>
+    <section class="muted"><div class="container"><h2>常見問題</h2>
+      <details><summary>Cloudflare Pages 適合純靜態網站嗎？</summary><p>適合。它可直接部署 HTML、CSS 與 JavaScript，並提供 CDN、HTTPS 及預覽部署。</p></details>
+      <details><summary>上線前最重要的追蹤檢查是什麼？</summary><p>確認正式 ID 已替換、事件只在正確動作發生時送出，且 GA4 Realtime 與廣告平台測試工具均收到資料。</p></details>
+    </div></section>
+    <section id="contact"><div class="container callout"><h2>準備建立可部署的靜態網站？</h2><p>來信說明目標、受眾與主要轉換動作。</p><a class="button" href="mailto:contact@example.com" onclick="trackEvent('generate_lead', {method: 'email'})">contact@example.com</a></div></section>
+  </main>
+  <footer><div class="container"><span>© Your Brand</span> · <a href="/privacy.html">隱私權政策</a></div></footer>
+  <noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=000000000000000&ev=PageView&noscript=1"></noscript>
+  <script src="/scripts/main.js"></script>
+</body>
+</html>
